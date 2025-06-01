@@ -12,7 +12,7 @@ const produtos = [
         },
         preco: 8999.90,
         disponivel: true,
-        imagem: "img/produtos/iphone15pro.jpg"
+        imagem: "img/produtos/iphone_15_pro.png"
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const produtos = [
         },
         preco: 9999.90,
         disponivel: true,
-        imagem: "img/produtos/s24ultra.jpg"
+        imagem: "img/produtos/S24ultra.png"
     },
     {
         id: 3,
@@ -40,7 +40,7 @@ const produtos = [
         },
         preco: 7999.90,
         disponivel: true,
-        imagem: "img/produtos/pixel8pro.jpg"
+        imagem: "img/produtos/google-pixel-b_grande-removebg-preview.png"
     },
     {
         id: 4,
@@ -54,7 +54,7 @@ const produtos = [
         },
         preco: 6999.90,
         disponivel: true,
-        imagem: "img/produtos/xiaomi14pro.jpg"
+        imagem: "img/produtos/xiaomi14pro.png"
     },
     {
         id: 5,
@@ -68,7 +68,7 @@ const produtos = [
         },
         preco: 4999.90,
         disponivel: true,
-        imagem: "img/produtos/edge40pro.jpg"
+        imagem: "img/produtos/motorola-edge-40-pro.png"
     },
     {
         id: 6,
@@ -82,7 +82,7 @@ const produtos = [
         },
         preco: 5999.90,
         disponivel: true,
-        imagem: "img/produtos/oneplus12.jpg"
+        imagem: "img/produtos/Oneplus12.png"
     },
     {
         id: 7,
@@ -96,7 +96,7 @@ const produtos = [
         },
         preco: 3999.90,
         disponivel: true,
-        imagem: "img/produtos/nothingphone2.jpg"
+        imagem: "img/produtos/nothing-phone-2.png"
     },
     {
         id: 8,
@@ -110,7 +110,7 @@ const produtos = [
         },
         preco: 8999.90,
         disponivel: false,
-        imagem: "img/produtos/rogphone8.jpg"
+        imagem: "img/produtos/rogphone.png"
     },
     {
         id: 9,
@@ -124,7 +124,7 @@ const produtos = [
         },
         preco: 7999.90,
         disponivel: true,
-        imagem: "img/produtos/xperia1v.jpg"
+        imagem: "img/produtos/sony-xperia-1.png"
     },
     {
         id: 10,
@@ -138,7 +138,7 @@ const produtos = [
         },
         preco: 4499.90,
         disponivel: true,
-        imagem: "img/produtos/gt5pro.jpg"
+        imagem: "img/produtos/relme-GT5-Pro.png"
     },
     {
         id: 11,
@@ -152,7 +152,7 @@ const produtos = [
         },
         preco: 6999.90,
         disponivel: true,
-        imagem: "img/produtos/x100pro.jpg"
+        imagem: "img/produtos/vivo_x100_pro.png"
     },
     {
         id: 12,
@@ -166,7 +166,7 @@ const produtos = [
         },
         preco: 7999.90,
         disponivel: false,
-        imagem: "img/produtos/findx7ultra.jpg"
+        imagem: "img/produtos/oppo-find-x7-ultra.png"
     }
 ];
 
@@ -183,7 +183,7 @@ function criarCardProduto(produto) {
     return `
         <div class="col-md-4 mb-4">
             <div class="card h-100">
-                <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}" style="height: 200px; object-fit: cover;">
+                <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}" style="height: 200px; object-fit: contain;">
                 <div class="card-body">
                     <h5 class="card-title">${produto.nome}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${produto.marca}</h6>
