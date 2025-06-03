@@ -140,13 +140,73 @@ footer {
 }
 
 /* Estilos do Hero Section */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
+#heroCarousel {
     margin-bottom: 2rem;
+    background-color: #f8f9fa;
+}
+
+#heroCarousel .carousel-item {
+    height: 300px;
+    background-color: #f8f9fa;
+}
+
+#heroCarousel .carousel-item img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+#heroCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#heroCarousel .carousel-caption h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#heroCarousel .carousel-caption p {
+    font-size: 1.1rem;
+}
+
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    width: 5%;
+}
+
+#heroCarousel .carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+#heroCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    #heroCarousel .carousel-item {
+        height: 300px;
+    }
+    
+    #heroCarousel .carousel-caption {
+        padding: 1rem;
+    }
+    
+    #heroCarousel .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    #heroCarousel .carousel-caption p {
+        font-size: 1rem;
+    }
 }
 
 /* Estilos dos Botões */
