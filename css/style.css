@@ -4,7 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #a6a6a6, #ffffff);
+    background-attachment: fixed;
 }
 
 footer {
@@ -359,4 +360,16 @@ footer a:hover {
 .badge {
     padding: 0.5em 0.75em;
     font-weight: 500;
+}
+
+.carousel-custom {
+    width: 1359px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.carousel-custom .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 } 
