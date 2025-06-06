@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagazinePhone - Sua Loja de Celulares</title>
+    <title>MagazinePhone</title>
+    <link rel="icon" type="imagem/png" href="img/magazinelogo.png">
     <!-- Bootstrap 5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -61,14 +62,14 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/carrossel/jiminzefelip.png" class="d-block w-100" alt="Smartphones em destaque">
+                <img src="img/carrossel/jiminzefelip5.png" class="d-block w-100" alt="Smartphones em destaque">
             </div>
             <div class="carousel-item">
-                <img src="img/carrossel/yongizefelip.png" class="d-block w-100" alt="Ofertas especiais">
+                <img src="img/carrossel/yongiizefelip5.png" class="d-block w-100" alt="Ofertas especiais">
 
             </div>
             <div class="carousel-item">
-                <img src="img/carrossel/namjunzefelip.png" class="d-block w-100" alt="Lançamentos">
+                <img src="img/carrossel/nanjunzefelip5.png" class="d-block w-100" alt="Lançamentos">
                 </div>
             </div>
           
@@ -126,11 +127,10 @@
     <!-- Lista de Produtos -->
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Smartphones</h2>
+            <h2 class="text-white">Smartphones</h2>
             <div class="btn-group">
-                
-                <button class="btn btn-outline-secondary" onclick="ordenarProdutos('menor-preco')">Menor Preço</button>
-                <button class="btn btn-outline-secondary" onclick="ordenarProdutos('maior-preco')">Maior Preço</button>
+                <button class="btn btn-outline-light" onclick="ordenarProdutos('menor-preco')">Menor Preço</button>
+                <button class="btn btn-outline-light" onclick="ordenarProdutos('maior-preco')">Maior Preço</button>
             </div>
         </div>
         <div class="row" id="lista-produtos">

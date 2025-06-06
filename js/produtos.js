@@ -238,5 +238,21 @@ function filtrarProdutos() {
     }
 }
 
+// Função para ordenar produtos
+function ordenarProdutos(tipo) {
+    let produtosOrdenados = [...produtos];
+    
+    if (tipo === 'menor-preco') {
+        produtosOrdenados.sort((a, b) => a.preco - b.preco);
+    } else if (tipo === 'maior-preco') {
+        produtosOrdenados.sort((a, b) => b.preco - a.preco);
+    }
+    
+    const containerProdutos = document.getElementById('lista-produtos');
+    if (containerProdutos) {
+        containerProdutos.innerHTML = produtosOrdenados.map(produto => criarCardProduto(produto)).join('');
+    }
+}
+
 // Inicializar a exibição dos produtos quando a página carregar
 document.addEventListener('DOMContentLoaded', exibirProdutos); 

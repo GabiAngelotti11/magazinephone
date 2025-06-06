@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #a6a6a6, #ffffff);
+    background: linear-gradient(180deg, #000000, #737373);
     background-attachment: fixed;
 }
 
@@ -363,9 +363,9 @@ footer a:hover {
 }
 
 .carousel-custom {
-    width: 1359px;
+    width: 100%;
     height: 300px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .carousel-custom .carousel-item img {
