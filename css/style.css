@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'Kunika';
+    src: url('../font/Kunika.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Estilos Gerais */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kunika', sans-serif;
     background: linear-gradient(180deg, #000000, #737373);
     background-attachment: fixed;
 }
@@ -232,6 +239,11 @@ footer {
     border-color: #dc3545;
 }
 
+.btn-danger:hover {
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
+
 /* Estilos do Footer */
 footer {
     background-color: #1a1a1a;
@@ -372,4 +384,14 @@ footer a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Cor de fundo personalizada */
+.bg-custom-gray {
+    background-color: #737373 !important;
+}
+
+.form-wider-container {
+    max-width: 1064px;
+    margin: auto;
 } 

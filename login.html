@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MagazinePhone</title>
+    <link rel="icon" type="imagem/png" href="img/magazinelogo.png">
+    <!-- Bootstrap 5.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/magazinelogo.png" alt="MagazinePhone Logo" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro-produto.html">Cadastrar Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro-usuario.html">Cadastrar Usuário</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="wishlist-icon me-2" data-bs-toggle="modal" data-bs-target="#listaDesejosModal">
+                        <i class="bi bi-heart"></i>
+                        <span class="wishlist-count" id="wishlist-count">0</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#carrinhoModal">
+                        <i class="bi bi-cart"></i> Carrinho
+                        <span class="badge bg-danger" id="carrinho-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="container">
+        <div class="login-container">
+            <h2>Entrar ou Cadastrar</h2>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="lembrar">
+                    <label class="form-check-label text-light" for="lembrar">Lembrar-me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3">Entrar</button>
+                
+                <div class="divider">ou</div>
+                
+                <button type="button" class="btn btn-google w-100 mb-3" onclick="loginComGoogle()">
+                    <i class="bi bi-google me-2"></i>Entrar com Google
+                </button>
+                
+                <div class="text-center">
+                    <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cadastroModal">Não tem uma conta? Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light">Cadastro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="cadastroForm">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text-light">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailCadastro" class="form-label text-light">E-mail</label>
+                            <input type="email" class="form-control" id="emailCadastro" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="senhaCadastro" class="form-label text-light">Senha</label>
+                            <input type="password" class="form-control" id="senhaCadastro" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmarSenha" class="form-label text-light">Confirmar Senha</label>
+                            <input type="password" class="form-control" id="confirmarSenha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/magazinelogo.png" alt="MagazinePhone Logo" height="50">
+                </div>
+                <div class="col-md-3">
+                    <h5>Institucional</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Quem Somos</a></li>
+                        <li><a href="#" class="text-light">Termos e Condições</a></li>
+                        <li><a href="#" class="text-light">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Atendimento</h5>
+                    <ul class="list-unstyled">
+                        <li>Contato: (11) 99999-9999</li>
+                        <li>Email: contato@magazinephone.com</li>
+                        <li>Horário: Seg-Sex 9h-18h</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Formas de Pagamento</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <img src="img/payment/visa.png" alt="Visa" height="30">
+                        <img src="img/payment/mastercard.png" alt="Mastercard" height="30">
+                        <img src="img/payment/amex.png" alt="Amex" height="30">
+                        <img src="img/payment/pix.png" alt="Pix" height="30">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Redes Sociais</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS e Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+            // Adicione sua configuração do Firebase aqui
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Função para login com Google
+        function loginComGoogle() {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider)
+                .then((result) => {
+                    // Login bem-sucedido
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Erro no login:', error);
+                });
+        }
+
+        // Manipular formulário de login
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            firebase.auth().signInWithEmailAndPassword(email, senha)
+                .then(() => {
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Erro no login:', error);
+                });
+        });
+
+        // Manipular formulário de cadastro
+        document.getElementById('cadastroForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailCadastro').value;
+            const senha = document.getElementById('senhaCadastro').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+
+            firebase.auth().createUserWithEmailAndPassword(email, senha)
+                .then(() => {
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    console.error('Erro no cadastro:', error);
+                });
+        });
+    </script>
+</body>
+</html> 
