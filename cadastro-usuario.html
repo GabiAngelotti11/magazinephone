@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
     <link rel="icon" type="imagem/png" href="img/magazinelogo.png">
-    <!-- Bootstrap 5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/magazinelogo.png" alt="MagazinePhone Logo" height="50"></a>
@@ -51,7 +47,6 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
     <div class="container mt-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -61,7 +56,6 @@
         </nav>
     </div>
 
-    <!-- Formulário de Cadastro -->
     <div class="container mt-4">
         <div class="card">
             <div class="card-header bg-custom-gray text-white">
@@ -69,7 +63,6 @@
             </div>
             <div class="card-body">
                 <form id="form-usuario" onsubmit="cadastrarUsuario(event)">
-                    <!-- Dados Pessoais -->
                     <h5 class="mb-3">Dados Pessoais</h5>
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -102,7 +95,6 @@
                         </div>
                     </div>
 
-                    <!-- Endereço -->
                     <h5 class="mb-3 mt-4">Endereço</h5>
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -168,7 +160,6 @@
                         <input type="text" class="form-control" id="complemento">
                     </div>
 
-                    <!-- Tipo de Usuário -->
                     <h5 class="mb-3 mt-4">Tipo de Usuário</h5>
                     <div class="mb-3">
                         <select class="form-select" id="tipo-usuario" required>
@@ -188,7 +179,6 @@
         </div>
     </div>
 
-    <!-- Lista de Usuários -->
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="text-white">Usuários</h2>
@@ -205,15 +195,64 @@
                         <th>E-mail</th>
                         <th>Telefone</th>
                         <th>Tipo</th>
-                        <th>Ações</th>
+                       
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ana Paula Souza</td>
+                        <td>ana.souza@gmail.com</td>
+                        <td>(11) 91234-5678</td>
+                        <td>Cliente</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Marcos Silva</td>
+                        <td>marcos.silva@empresa.com.br</td>
+                        <td>(21) 99876-5432</td>
+                        <td>Funcionário</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Beatriz Oliveira</td>
+                        <td>beatriz.oliveira@yahoo.com</td>
+                        <td>(31) 98765-4321</td>
+                        <td>Cliente</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>João Carlos Mendes</td>
+                        <td>joao.mendes@empresa.com.br</td>
+                        <td>(41) 99654-3210</td>
+                        <td>Administrador</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fernanda Lima</td>
+                        <td>fernanda.lima@hotmail.com</td>
+                        <td>(51) 99543-2109</td>
+                        <td>Funcionário</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lucas Ferreira</td>
+                        <td>lucas.ferreira@gmail.com</td>
+                        <td>(61) 99432-1098</td>
+                        <td>Cliente</td>
+                        <td></td>
+                    </tr>
+                </tbody>
                 <tbody id="lista-usuarios">
-                    <!-- Os usuários serão carregados via JavaScript -->
                 </tbody>
             </table>
         </div>
-        <!-- Paginação -->
+ 
         <nav aria-label="Navegação de páginas" class="mt-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
@@ -228,8 +267,6 @@
             </ul>
         </nav>
     </div>
-
-    <!-- Modal do Carrinho -->
     <div class="modal fade" id="carrinhoModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -239,7 +276,6 @@
                 </div>
                 <div class="modal-body">
                     <div id="carrinho-items">
-                        <!-- Itens do carrinho serão carregados via JavaScript -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -255,7 +291,7 @@
         </div>
     </div>
 
-    <!-- Modal da Lista de Desejos -->
+
     <div class="modal fade" id="listaDesejosModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -265,14 +301,14 @@
                 </div>
                 <div class="modal-body">
                     <div id="lista-desejos-items">
-                        <!-- Itens da lista de desejos serão carregados via JavaScript -->
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+   
     <footer class="bg-dark text-light mt-5">
         <div class="container py-4">
             <div class="row">
@@ -298,10 +334,10 @@
                 <div class="col-md-3">
                     <h5>Formas de Pagamento</h5>
                     <div class="d-flex flex-wrap gap-2">
-                        <img src="img/payment/visa.png" alt="Visa" height="30">
-                        <img src="img/payment/mastercard.png" alt="Mastercard" height="30">
-                        <img src="img/payment/amex.png" alt="Amex" height="30">
-                        <img src="img/payment/pix.png" alt="Pix" height="30">
+                        <img src="img/footer/visa.png" alt="Visa" height="30">
+                        <img src="img/footer/mastercard.png" alt="Mastercard" height="30">
+                        <img src="img/footer/elo.png" alt="Elo" height="30">
+                        <img src="img/footer/PIX.png" alt="Pix" height="30">
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -317,9 +353,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5.0 JS Bundle -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript Personalizado -->
+   
     <script src="js/main.js"></script>
 </body>
 </html> 

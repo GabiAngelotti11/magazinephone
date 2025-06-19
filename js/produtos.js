@@ -1,4 +1,3 @@
-// Lista de produtos (celulares)
 const produtos = [
     {
         id: 1,
@@ -170,7 +169,6 @@ const produtos = [
     }
 ];
 
-// Função para formatar preço em reais
 function formatarPreco(preco) {
     return preco.toLocaleString('pt-BR', {
         style: 'currency',
@@ -178,7 +176,6 @@ function formatarPreco(preco) {
     });
 }
 
-// Função para criar o card de produto
 function criarCardProduto(produto) {
     return `
         <div class="col-md-4 mb-4">
@@ -210,7 +207,6 @@ function criarCardProduto(produto) {
     `;
 }
 
-// Função para exibir os produtos
 function exibirProdutos() {
     const containerProdutos = document.getElementById('lista-produtos');
     if (containerProdutos) {
@@ -218,7 +214,6 @@ function exibirProdutos() {
     }
 }
 
-// Função para filtrar produtos
 function filtrarProdutos() {
     const categoria = document.getElementById('filtro-categoria').value;
     const marca = document.getElementById('filtro-marca').value;
@@ -238,7 +233,6 @@ function filtrarProdutos() {
     }
 }
 
-// Função para ordenar produtos
 function ordenarProdutos(tipo) {
     let produtosOrdenados = [...produtos];
     
@@ -254,5 +248,6 @@ function ordenarProdutos(tipo) {
     }
 }
 
-// Inicializar a exibição dos produtos quando a página carregar
-document.addEventListener('DOMContentLoaded', exibirProdutos); 
+document.addEventListener('DOMContentLoaded', () => {
+    exibirProdutos();
+}); 

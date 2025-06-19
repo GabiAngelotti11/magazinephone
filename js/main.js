@@ -1,4 +1,4 @@
-// Inicialização do Local Storage
+
 if (!localStorage.getItem('produtos')) {
     localStorage.setItem('produtos', JSON.stringify([]));
 }
@@ -12,16 +12,16 @@ if (!localStorage.getItem('listaDesejos')) {
     localStorage.setItem('listaDesejos', JSON.stringify([]));
 }
 
-// Função para carregar produtos em destaque
+
 function carregarProdutosDestaque() {
     const produtos = JSON.parse(localStorage.getItem('produtos'));
     const container = document.getElementById('produtos-destaque');
     if (!container) return;
 
-    // Ordena os produtos por data de cadastro (mais recentes primeiro)
+    
     produtos.sort((a, b) => new Date(b.dataCadastro) - new Date(a.dataCadastro));
 
-    // Pega os 8 produtos mais recentes
+    
     const produtosDestaque = produtos.slice(0, 8);
 
     container.innerHTML = produtosDestaque.map(produto => `
@@ -55,7 +55,7 @@ function carregarProdutosDestaque() {
     `).join('');
 }
 
-// Função para adicionar produto ao carrinho
+
 function adicionarAoCarrinho(produtoId) {
     const produtos = JSON.parse(localStorage.getItem('produtos'));
     const carrinho = JSON.parse(localStorage.getItem('carrinho'));
@@ -81,7 +81,7 @@ function adicionarAoCarrinho(produtoId) {
     mostrarNotificacao('Produto adicionado ao carrinho!');
 }
 
-// Função para atualizar o contador do carrinho
+
 function atualizarCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem('carrinho'));
     const contador = document.getElementById('carrinho-count');
@@ -91,7 +91,6 @@ function atualizarCarrinho() {
     }
 }
 
-// Função para mostrar notificação
 function mostrarNotificacao(mensagem) {
     const toast = document.createElement('div');
     toast.className = 'toast position-fixed bottom-0 end-0 m-3';
@@ -111,7 +110,7 @@ function mostrarNotificacao(mensagem) {
     toast.addEventListener('hidden.bs.toast', () => toast.remove());
 }
 
-// Função para cadastrar produto
+
 function cadastrarProduto(event) {
     event.preventDefault();
     const produtos = JSON.parse(localStorage.getItem('produtos'));
@@ -136,7 +135,7 @@ function cadastrarProduto(event) {
     window.location.href = 'produtos.html';
 }
 
-// Função para cadastrar usuário
+
 function cadastrarUsuario(event) {
     event.preventDefault();
     const usuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -174,7 +173,6 @@ function cadastrarUsuario(event) {
     window.location.href = 'usuarios.html';
 }
 
-// Função para listar produtos
 function listarProdutos() {
     const produtos = JSON.parse(localStorage.getItem('produtos'));
     const container = document.getElementById('lista-produtos');
@@ -216,7 +214,7 @@ function listarProdutos() {
     `).join('');
 }
 
-// Função para listar usuários
+
 function listarUsuarios() {
     const usuarios = JSON.parse(localStorage.getItem('usuarios'));
     const container = document.getElementById('lista-usuarios');
@@ -247,7 +245,7 @@ function listarUsuarios() {
     `).join('');
 }
 
-// Função para filtrar produtos
+
 function filtrarProdutos() {
     const produtos = JSON.parse(localStorage.getItem('produtos'));
     const categoria = document.getElementById('filtro-categoria').value;
@@ -302,7 +300,7 @@ function filtrarProdutos() {
     `).join('');
 }
 
-// Função para filtrar usuários
+
 function filtrarUsuarios() {
     const usuarios = JSON.parse(localStorage.getItem('usuarios'));
     const nome = document.getElementById('filtro-nome').value.toLowerCase();
@@ -344,12 +342,12 @@ function filtrarUsuarios() {
     `).join('');
 }
 
-// Função para editar produto
+
 function editarProduto(id) {
     window.location.href = `cadastro-produto.html?id=${id}`;
 }
 
-// Função para excluir produto
+
 function excluirProduto(id) {
     if (confirm('Tem certeza que deseja excluir este produto?')) {
         const produtos = JSON.parse(localStorage.getItem('produtos'));
@@ -360,12 +358,12 @@ function excluirProduto(id) {
     }
 }
 
-// Função para editar usuário
+
 function editarUsuario(id) {
     window.location.href = `cadastro-usuario.html?id=${id}`;
 }
 
-// Função para excluir usuário
+
 function excluirUsuario(id) {
     if (confirm('Tem certeza que deseja excluir este usuário?')) {
         const usuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -376,7 +374,7 @@ function excluirUsuario(id) {
     }
 }
 
-// Função para atualizar o contador da lista de desejos
+
 function atualizarListaDesejos() {
     const listaDesejos = JSON.parse(localStorage.getItem('listaDesejos'));
     const contador = document.getElementById('wishlist-count');
@@ -385,7 +383,7 @@ function atualizarListaDesejos() {
     }
 }
 
-// Função para adicionar produto à lista de desejos
+
 function adicionarAosDesejos(produtoId) {
     const produtos = JSON.parse(localStorage.getItem('produtos'));
     const listaDesejos = JSON.parse(localStorage.getItem('listaDesejos'));
@@ -408,7 +406,6 @@ function adicionarAosDesejos(produtoId) {
     }
 }
 
-// Função para remover produto da lista de desejos
 function removerDosDesejos(produtoId) {
     const listaDesejos = JSON.parse(localStorage.getItem('listaDesejos'));
     const listaAtualizada = listaDesejos.filter(item => item.produtoId !== produtoId);
@@ -417,7 +414,7 @@ function removerDosDesejos(produtoId) {
     mostrarNotificacao('Produto removido da lista de desejos!');
 }
 
-// Inicialização
+
 document.addEventListener('DOMContentLoaded', () => {
     carregarProdutosDestaque();
     listarProdutos();

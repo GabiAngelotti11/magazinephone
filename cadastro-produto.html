@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produto</title>
     <link rel="icon" type="imagem/png" href="img/magazinelogo.png">
-    <!-- Bootstrap 5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/magazinelogo.png" alt="MagazinePhone Logo" height="50"></a>
@@ -50,7 +46,6 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
     <div class="container mt-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -60,7 +55,6 @@
         </nav>
     </div>
 
-    <!-- Formulário de Cadastro -->
     <div class="container mt-4">
         <div class="card">
             <div class="card-header bg-custom-gray text-white">
@@ -124,10 +118,6 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="imagem" class="form-label">URL da Imagem</label>
-                        <input type="url" class="form-control" id="imagem" required>
-                    </div>
-                    <div class="mb-3">
                         <label for="especificacoes" class="form-label">Especificações Técnicas</label>
                         <textarea class="form-control" id="especificacoes" rows="4" required></textarea>
                     </div>
@@ -140,54 +130,6 @@
         </div>
     </div>
 
-    <!-- Filtros -->
-    <div class="container mt-4">
-        <div class="filtros-container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="filtro-nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="filtro-nome" onchange="filtrarProdutos()">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="filtro-marca" class="form-label">Marca</label>
-                        <select class="form-select" id="filtro-marca" onchange="filtrarProdutos()">
-                            <option value="">Todas</option>
-                            <option value="samsung">Samsung</option>
-                            <option value="apple">Apple</option>
-                            <option value="xiaomi">Xiaomi</option>
-                            <option value="motorola">Motorola</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="filtro-categoria" class="form-label">Categoria</label>
-                        <select class="form-select" id="filtro-categoria" onchange="filtrarProdutos()">
-                            <option value="">Todas</option>
-                            <option value="smartphone">Smartphone</option>
-                            <option value="tablet">Tablet</option>
-                            <option value="acessorios">Acessórios</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="filtro-estoque" class="form-label">Disponibilidade</label>
-                        <select class="form-select" id="filtro-estoque" onchange="filtrarProdutos()">
-                            <option value="">Todos</option>
-                            <option value="disponivel">Disponível</option>
-                            <option value="indisponivel">Indisponível</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lista de Produtos -->
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="text-white">Produtos Cadastrados</h2>
@@ -206,15 +148,111 @@
                         <th>Modelo</th>
                         <th>Preço</th>
                         <th>Estoque</th>
-                        <th>Ações</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>iPhone 15 Pro</td>
+                        <td>Apple</td>
+                        <td>256GB</td>
+                        <td>R$ 8.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Galaxy S24 Ultra</td>
+                        <td>Samsung</td>
+                        <td>512GB</td>
+                        <td>R$ 9.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pixel 8 Pro</td>
+                        <td>Google</td>
+                        <td>256GB</td>
+                        <td>R$ 7.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Xiaomi 14 Pro</td>
+                        <td>Xiaomi</td>
+                        <td>512GB</td>
+                        <td>R$ 6.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Motorola Edge 40 Pro</td>
+                        <td>Motorola</td>
+                        <td>256GB</td>
+                        <td>R$ 4.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>OnePlus 12</td>
+                        <td>OnePlus</td>
+                        <td>256GB</td>
+                        <td>R$ 5.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Nothing Phone 2</td>
+                        <td>Nothing</td>
+                        <td>256GB</td>
+                        <td>R$ 3.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>ASUS ROG Phone 8</td>
+                        <td>ASUS</td>
+                        <td>512GB</td>
+                        <td>R$ 8.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Sony Xperia 1 V</td>
+                        <td>Sony</td>
+                        <td>256GB</td>
+                        <td>R$ 7.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Realme GT5 Pro</td>
+                        <td>Realme</td>
+                        <td>256GB</td>
+                        <td>R$ 4.499,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Vivo X100 Pro</td>
+                        <td>Vivo</td>
+                        <td>512GB</td>
+                        <td>R$ 6.999,90</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>OPPO Find X7 Ultra</td>
+                        <td>OPPO</td>
+                        <td>512GB</td>
+                        <td>R$ 7.999,90</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
                 <tbody id="lista-produtos">
-                    <!-- Os produtos serão carregados via JavaScript -->
                 </tbody>
             </table>
         </div>
-        <!-- Paginação -->
+        
         <nav aria-label="Navegação de páginas" class="mt-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
@@ -230,7 +268,7 @@
         </nav>
     </div>
 
-    <!-- Modal do Carrinho -->
+    
     <div class="modal fade" id="carrinhoModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -240,7 +278,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="carrinho-items">
-                        <!-- Itens do carrinho serão carregados via JavaScript -->
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -256,7 +294,7 @@
         </div>
     </div>
 
-    <!-- Modal da Lista de Desejos -->
+    
     <div class="modal fade" id="listaDesejosModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -266,14 +304,13 @@
                 </div>
                 <div class="modal-body">
                     <div id="lista-desejos-items">
-                        <!-- Itens da lista de desejos serão carregados via JavaScript -->
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="bg-dark text-light mt-5">
         <div class="container py-4">
             <div class="row">
@@ -299,10 +336,10 @@
                 <div class="col-md-3">
                     <h5>Formas de Pagamento</h5>
                     <div class="d-flex flex-wrap gap-2">
-                        <img src="img/payment/visa.png" alt="Visa" height="30">
-                        <img src="img/payment/mastercard.png" alt="Mastercard" height="30">
-                        <img src="img/payment/amex.png" alt="Amex" height="30">
-                        <img src="img/payment/pix.png" alt="Pix" height="30">
+                        <img src="img/footer/visa.png" alt="Visa" height="30">
+                        <img src="img/footer/mastercard.png" alt="Mastercard" height="30">
+                        <img src="img/footer/elo.png" alt="Elo" height="30">
+                        <img src="img/footer/PIX.png" alt="Pix" height="30">
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -318,9 +355,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5.0 JS Bundle -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript Personalizado -->
+    
     <script src="js/main.js"></script>
 </body>
 </html> 

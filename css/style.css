@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-/* Estilos Gerais */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ footer {
     margin-top: auto;
 }
 
-/* Estilos do Header */
+
 .navbar {
     background-color: #1a1a1a !important;
     padding: 1rem 0;
@@ -86,7 +86,7 @@ footer {
     justify-content: center;
 }
 
-/* Estilos dos Cards de Produtos */
+
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
     border: none;
@@ -123,7 +123,7 @@ footer {
     color: #6c757d;
 }
 
-/* Estilos do Formulário */
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;
@@ -133,7 +133,6 @@ footer {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Estilos da Tabela */
 .table-container {
     overflow-x: auto;
     background-color: #fff;
@@ -147,7 +146,7 @@ footer {
     border-bottom: 2px solid #dee2e6;
 }
 
-/* Estilos do Hero Section */
+
 #heroCarousel {
     margin-bottom: 2rem;
     background-color: #f8f9fa;
@@ -217,7 +216,7 @@ footer {
     }
 }
 
-/* Estilos dos Botões */
+
 .btn-primary {
     background-color: #e31b23;
     border-color: #e31b23;
@@ -244,7 +243,7 @@ footer {
     border-color: #bd2130;
 }
 
-/* Estilos do Footer */
+
 footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -273,7 +272,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Estilos Responsivos */
+
 @media (max-width: 768px) {
     .hero-section {
         padding: 50px 0;
@@ -301,7 +300,7 @@ footer a:hover {
     }
 }
 
-/* Estilos para Promoções */
+
 .promocao-badge {
     position: absolute;
     top: 10px;
@@ -314,7 +313,7 @@ footer a:hover {
     font-weight: bold;
 }
 
-/* Estilos para Filtros */
+
 .filtros-container {
     background-color: white;
     padding: 1.5rem;
@@ -332,7 +331,6 @@ footer a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* Estilos para Breadcrumb */
 .breadcrumb {
     background-color: transparent;
     padding: 0.5rem 0;
@@ -343,7 +341,7 @@ footer a:hover {
     content: ">";
 }
 
-/* Estilos para Paginação */
+
 .pagination {
     margin-top: 2rem;
     justify-content: center;
@@ -358,7 +356,6 @@ footer a:hover {
     border-color: #e31b23;
 }
 
-/* Botões de Ordenação */
 .btn-group .btn {
     border-color: #dee2e6;
 }
@@ -368,7 +365,6 @@ footer a:hover {
     color: white;
 }
 
-/* Badges */
 .badge {
     padding: 0.5em 0.75em;
     font-weight: 500;
@@ -386,7 +382,7 @@ footer a:hover {
     object-fit: cover;
 }
 
-/* Cor de fundo personalizada */
+
 .bg-custom-gray {
     background-color: #737373 !important;
 }
